@@ -52,6 +52,8 @@ p{
     width: 80%;
     max-width: 400px;
     text-align: center;
+    position:relative;
+    overflow:hidden;
 
     /* slight inner glow at rest */
     box-shadow: inset 0 0 20px rgba(0, 174, 255, 0.1);
@@ -74,4 +76,22 @@ p{
         inset 0 0 25px rgba(0, 174, 255, 0.08),  /* inner */
         0 0 20px rgba(0, 174, 255, 0.2),           /* close outer */
         0 0 60px rgba(0, 174, 255, 0.1);
+}
+
+.spot {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.25s;
+    background: radial-gradient(
+        220px circle at var(--x, 50%) var(--y, 50%),
+        rgba(0, 174, 255, 0.1),
+        transparent 70%
+    );
+}
+
+.content:hover .spot {
+    opacity: 1;
 }
