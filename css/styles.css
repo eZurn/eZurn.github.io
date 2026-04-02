@@ -1,10 +1,12 @@
 body{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    background-color:rgb(18, 18, 18);
-    margin:0px;
+    display: flex;
+    flex-direction: column;   /* <-- this is the key */
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 100vh;
+    background-color: rgb(18, 18, 18);
+    margin: 0;
 }
 
 body::before {
@@ -104,6 +106,7 @@ p{
     width: 100%;
     max-width: 900px;
     align-items: start;
+    
 }
 
 @media (max-width: 700px) {
