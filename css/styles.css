@@ -408,6 +408,28 @@ body::after {
     justify-content: center;
 }
 
+/* ── Name-only placeholder (dark bg + colored name) ── */
+.style-dark-name { background: rgb(10, 11, 18); }
+
+.img-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    text-align: center;
+    padding: 0 1rem;
+    line-height: 1.15;
+    position: relative;
+    z-index: 1;
+}
+
+[data-glow="blue"]    .img-name { color: #3b82f6; }
+[data-glow="violet"]  .img-name { color: #8b5cf6; }
+[data-glow="cyan"]    .img-name { color: #06b6d4; }
+[data-glow="emerald"] .img-name { color: #10b981; }
+[data-glow="rose"]    .img-name { color: #f43f5e; }
+[data-glow="amber"]   .img-name { color: #f59e0b; }
+
 /* ── Idea 04: dark outer + tinted inner frame ── */
 .style-dark-frame { background: rgb(10, 11, 18); }
 
